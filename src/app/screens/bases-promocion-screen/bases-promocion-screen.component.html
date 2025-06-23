@@ -1,0 +1,78 @@
+<section class="promocion">
+  <div class="wrapper">
+
+    <mat-drawer-container>
+    <mat-drawer #drawer mode='over' position="start">
+    <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+    </mat-drawer>
+
+    <app-header-app></app-header-app>
+
+    <div class="promocion-home">
+      <div class="{{isMobile(1)}}">
+        <div class="section-image">
+          <img src="/assets/images/header-img.png" class="banner-img">
+          <div class="pie-img ">
+            <span>Ducati Motor Holding 5.p.A Official Licensed Product</span>
+            </div>
+              <div class="container-title">
+                <div class="vertical-line"></div>
+                <div class="title-link">
+              Bases de la promoción
+            </div>
+          </div>
+
+          <div class="info">
+            <div class="section-img-info">
+              <div class="step">
+              <img class="images" src="/assets/images/1-compra-titulo.png">
+              <p>productos participante <span style="color: white;">---</span> <img class="logo-marcas" src="assets/images/logo-marcas.png"><br>
+              <strong>en Liverpool/Devlyn</strong></p>
+              </div>
+
+              <div class="step">
+              <img class="images" src="/assets/images/2-registra-titulo.png">
+              <p>todos tus códigos en el sitio<br>
+              <strong>www.acelerayganaconcarrera.com.mx</strong></p>
+              </div>
+
+              <div class="step">
+              <img class="images" src="/assets/images/3-acumula-titulo.png">
+              <p>puntos con cada compra y juega por puntos extras</p>
+              </div>
+
+              <div class="step">
+              <img class="images" src="/assets/images/4-gana-titulo.png">
+              <p>Una <strong>Moto Ducati</strong> al finalizar la promoción</p>
+              </div>
+              <img src="/assets/images/moto.png" class="moto">
+
+              <p class="text-info">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+                no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur
+                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer-app></app-footer-app>
+    </mat-drawer-container>
+  </div>
+</section>
