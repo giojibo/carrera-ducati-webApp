@@ -8,25 +8,13 @@ import { Component } from '@angular/core';
 export class BasesPromocionScreenComponent {
 
 
-  public isMobile(tipo: number){
-    switch(tipo){
-      case 1:
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(navigator.userAgent)){
-          return "style-mobile";
-        }else{
-          return "interior-codigos";
-        }
-        break;
-      case 2:
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(navigator.userAgent)){
-          return "style-mobile";
-        }else{
-          return "interior-codigos-registrados";
-        }
-        break;
+   public isMobile(){
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(navigator.userAgent)){
+      return "interior-mobile";
+    }else{
+      return "interior-normal";
     }
   }
-
 }
 
 

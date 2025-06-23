@@ -26,12 +26,16 @@ export class LeftSidebarComponent implements OnInit{
 
   }
 
+  public goToPerfil(){
+    this.router.navigate(["perfil-usuario"])
+  }
+
   public goInicio(){
     this.router.navigate(["home"]);
   }
 
   public goBasesPromocion(){
-
+    this.router.navigate(["bases-promocion"]);
   }
 
   public goTiendasParticipantes(){

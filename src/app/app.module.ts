@@ -17,6 +17,7 @@ import { RegistroScreenComponent } from './screens/registro-screen/registro-scre
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
 
 //Para usar el mask
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
@@ -54,7 +55,8 @@ import { PerfilUserComponent } from './partials/perfil-user/perfil-user.componen
     MatSelectModule,
     MatCheckboxModule,
     NgxMaskDirective,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule
   ],
   providers: [
     provideNgxMask()

@@ -1,78 +1,85 @@
-<section class="promocion">
+<section class="bases-promocion">
   <div class="wrapper">
-
+    <!-- Esta etiqueta se usa para indicar todo el html que debe cubrir el menú -->
     <mat-drawer-container>
-    <mat-drawer #drawer mode='over' position="start">
-    <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
-    </mat-drawer>
-
-    <app-header-app></app-header-app>
-
-    <div class="promocion-home">
-      <div class="{{isMobile(1)}}">
+      <mat-drawer #drawer mode='over' position="start">
+        <!-- Inyectamos el componente partial que muestra el menú izquierdo -->
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+      </mat-drawer>
+      <!-- Se coloca el header de las vistas -->
+      <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+      <!-- Sección del body donde se muestra todo el contenido -->
+      <div class="body-home">
+        <!-- Sección de la imagen inicial y el eslogan -->
         <div class="section-image">
-          <img src="/assets/images/header-img.png" class="banner-img">
-          <div class="pie-img ">
-            <span>Ducati Motor Holding 5.p.A Official Licensed Product</span>
-            </div>
-              <div class="container-title">
-                <div class="vertical-line"></div>
-                <div class="title-link">
-              Bases de la promoción
-            </div>
+          <img src="/assets/images/header-img.png" class="header-img">
+          <div class="line-red-horizontal">
+            <span class="text-ducati">Ducati Motor Holding S.p.A. Official Licensed Product</span>
           </div>
-
-          <div class="info">
-            <div class="section-img-info">
-              <div class="step">
-              <img class="images" src="/assets/images/1-compra-titulo.png">
-              <p>productos participante <span style="color: white;">---</span> <img class="logo-marcas" src="assets/images/logo-marcas.png"><br>
-              <strong>en Liverpool/Devlyn</strong></p>
+          <div class="eslogan {{isMobile()}}">
+              <div class="line-color">
+                  <div class="vertical-line" style="height: 111px;"></div>
               </div>
-
-              <div class="step">
-              <img class="images" src="/assets/images/2-registra-titulo.png">
-              <p>todos tus códigos en el sitio<br>
-              <strong>www.acelerayganaconcarrera.com.mx</strong></p>
+              <div class="title-link">
+                  <span>Bases de la promoción</span>
               </div>
-
-              <div class="step">
-              <img class="images" src="/assets/images/3-acumula-titulo.png">
-              <p>puntos con cada compra y juega por puntos extras</p>
-              </div>
-
-              <div class="step">
-              <img class="images" src="/assets/images/4-gana-titulo.png">
-              <p>Una <strong>Moto Ducati</strong> al finalizar la promoción</p>
-              </div>
-              <img src="/assets/images/moto.png" class="moto">
-
-              <p class="text-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur
-                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.
-              </p>
-            </div>
           </div>
         </div>
+        <!-- Sección de imagenes numeradas-->
+        <div class="section-bases">
+          <div class="num-bases">
+            <img src="/assets/images/1-compra-titulo.png" class="compra-1">
+            <div class="text-and-image">
+                <span class="txt-normal">productos participantes</span>
+                <img src="/assets/images/logo-marcas.png" class="logo-mini">
+            </div>
+            <span class="txt-bold mt-1">en Liverpool/Devlyn</span>
+          </div>
+
+          <div class="num-bases">
+            <img src="/assets/images/2-registra-titulo.png" class="compra-2">
+            <span class="txt-normal">todos tus códigos en el sitio</span>
+            <span class="txt-bold">www.acelerayganaconcarrera.com.mx</span>
+          </div>
+
+          <!-- TODO:Colocar el contenido faltante de bases de la promocion -->
+
+          <div class="num-bases">
+            <img src="/assets/images/3-acumula-titulo.png" class="compra-3">
+            <span class="txt-normal">puntos con cada compra y juega por puntos extras</span>
+          </div>
+
+          <div class="num-bases">
+            <img src="/assets/images/4-gana-titulo.png" class="compra-4">
+            <span class="txt-normal">Una <span class="txt-bold">Moto Ducati</span> al finalizar la promoción</span>
+          </div>
+
+          <div class="moto-section">
+            <img class="moto-img" src="/assets/images/moto.png">
+          </div>
+
+          <div class="text-info">
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+              sed diam nonumy eirmod tempor invidunt ut labore et dolore
+              magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+              et justo duo dolores et ea rebum.
+              <br>
+              <br>
+              Stet clita kasd gubergren,
+              no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+              ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+              diam voluptua.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. Footer -->
+        <div class="footer">
+          <app-footer-app></app-footer-app>
+        </div>
       </div>
-    </div>
-    <app-footer-app></app-footer-app>
     </mat-drawer-container>
   </div>
 </section>

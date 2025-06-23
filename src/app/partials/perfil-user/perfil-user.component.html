@@ -1,1 +1,45 @@
-<p>perfil-user works!</p>
+<div class="perfil">
+  <div class="wrapper">
+
+    <mat-drawer-container>
+      <mat-drawer #drawer mode='over' position="start">
+        <app-left-sidebar (cerrar)="drawer.toggle()"></app-left-sidebar>
+      </mat-drawer>
+
+      <app-header-app (drawer)="drawer.toggle()"></app-header-app>
+
+      <div class="body-home">
+        <div class="section-image">
+          <div class="perfil-container">
+            <div class="perfil-foto">
+              <img src="/assets/perfil/perfil.jpg">
+            </div>
+
+            <div class="datos-usuario">
+              <mat-card class="ducati-card">
+                <mat-card-title class="titulo">Datos de usuario</mat-card-title>
+                <mat-card-subtitle class="subtitulo">Desde 12 de Diciembre de 2024</mat-card-subtitle>
+                <mat-card-content>
+                  <span class="dato"><strong>Nombre: </strong> Giovani</span>
+                  <hr>
+                  <span class="dato"><strong>Apellidos: </strong> Jimenez Bonilla</span>
+                  <hr>
+                  <span class="dato"><strong>Email: </strong> giovani.jimenez&#64;alumno.buap.mx</span>
+                  <hr>
+                  <span class="dato"><strong>Teléfono: </strong> (221) 393-0989</span>
+                  <hr>
+                  <span class="dato"><strong>Entidad: </strong> Puebla</span>
+                  <hr>
+                </mat-card-content>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <app-footer-app></app-footer-app>
+      </div>
+    </mat-drawer-container>
+  </div>
+</div>

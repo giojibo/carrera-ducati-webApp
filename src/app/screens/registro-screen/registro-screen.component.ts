@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 declare var $:any;
 
@@ -21,7 +22,8 @@ export class RegistroScreenComponent implements OnInit{
   public edades: any[] = [];
 
   constructor(
-    private usuariosService: UsuariosService
+    private usuariosService: UsuariosService,
+    private router: Router,
   ){}
 
   ngOnInit(): void {
@@ -57,7 +59,7 @@ export class RegistroScreenComponent implements OnInit{
   }
 
   public goLogin(){
-
+    this.router.navigate(["/"])
   }
 
   public terminosCondiciones(){
