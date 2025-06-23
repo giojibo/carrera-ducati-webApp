@@ -27,6 +27,8 @@ import { LeftSidebarComponent } from './partials/left-sidebar/left-sidebar.compo
 import { FooterAppComponent } from './partials/footer-app/footer-app.component';
 import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/bases-promocion-screen.component';
 import { PerfilUserComponent } from './partials/perfil-user/perfil-user.component';
+import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad-screen/politica-privacidad-screen.component';
+import { TerminosCondicionesScreenComponent } from './screens/terminos-condiciones-screen/terminos-condiciones-screen.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { PerfilUserComponent } from './partials/perfil-user/perfil-user.componen
     LeftSidebarComponent,
     FooterAppComponent,
     BasesPromocionScreenComponent,
-    PerfilUserComponent
+    PerfilUserComponent,
+    PoliticaPrivacidadScreenComponent,
+    TerminosCondicionesScreenComponent
   ],
   imports: [
     BrowserModule,
