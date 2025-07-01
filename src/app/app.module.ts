@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -29,6 +29,11 @@ import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/
 import { PerfilUserComponent } from './partials/perfil-user/perfil-user.component';
 import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad-screen/politica-privacidad-screen.component';
 import { TerminosCondicionesScreenComponent } from './screens/terminos-condiciones-screen/terminos-condiciones-screen.component';
+import { InstruccionesScreenComponent } from './screens/instrucciones-screen/instrucciones-screen.component';
+import { NuevoLookScreenComponent } from './screens/nuevo-look-screen/nuevo-look-screen.component';
+import { JuegoTerminadoScreenComponent } from './screens/juego-terminado-screen/juego-terminado-screen.component';
+import { JuegoComponent } from './screens/juego/juego.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -43,7 +48,11 @@ import { TerminosCondicionesScreenComponent } from './screens/terminos-condicion
     BasesPromocionScreenComponent,
     PerfilUserComponent,
     PoliticaPrivacidadScreenComponent,
-    TerminosCondicionesScreenComponent
+    TerminosCondicionesScreenComponent,
+    InstruccionesScreenComponent,
+    NuevoLookScreenComponent,
+    JuegoTerminadoScreenComponent,
+    JuegoComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +69,13 @@ import { TerminosCondicionesScreenComponent } from './screens/terminos-condicion
     MatCheckboxModule,
     NgxMaskDirective,
     MatSidenavModule,
-    MatCardModule
+    MatCardModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [
     provideNgxMask()

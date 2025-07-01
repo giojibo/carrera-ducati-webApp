@@ -10,6 +10,8 @@ export class LeftSidebarComponent implements OnInit{
   @Output() cerrar = new EventEmitter();
   public isLogin: boolean = true;
 
+  public url: string = 'https://docs.google.com/document/d/10J6EUDqat7ISeHheKPc-oJDQGQ7xXQO0/edit?tab=t.0';
+
   constructor(
     private router: Router
   ){}
@@ -39,7 +41,7 @@ export class LeftSidebarComponent implements OnInit{
   }
 
   public goTiendasParticipantes(){
-
+    window.open(this.url, '_blank');
   }
 
   public logout(){

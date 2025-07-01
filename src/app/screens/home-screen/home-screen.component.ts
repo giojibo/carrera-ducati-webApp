@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HomeScreenComponent implements OnInit{
 
-  public name_user:string = "Luis Yael Méndez Sánchez";
+  public name_user:string = "Giovani Jimenez Bonilla";
   public isLoading: boolean = false;
   //Form dinámico de campos de texto
   public inputsCodigo : FormGroup;
@@ -33,7 +33,7 @@ export class HomeScreenComponent implements OnInit{
   }
 
   public saberMas(){
-
+    this.router.navigate(["bases-promocion"])
   }
 
   public initInputsCodigo(){
@@ -107,5 +107,9 @@ export class HomeScreenComponent implements OnInit{
         }
         break;
     }
+  }
+
+  public instrucciones(){
+    this.router.navigate(["instrucciones"]);
   }
 }

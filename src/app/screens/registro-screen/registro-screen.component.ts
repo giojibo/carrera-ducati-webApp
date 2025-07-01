@@ -63,7 +63,7 @@ export class RegistroScreenComponent implements OnInit{
   }
 
   public terminosCondiciones(){
-
+    this.router.navigate(["terminos-condiciones"]);
   }
 
   showPassword()
