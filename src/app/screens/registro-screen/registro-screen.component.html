@@ -135,7 +135,7 @@
 
               <mat-form-field class="inputs-login" appearance="outline">
                   <mat-label>Ciudad</mat-label>
-                  <input [(ngModel)]="user.ciudad" type="text" matInput placeholder="Ingresa ciudad">
+                  <input [(ngModel)]="user.ciudad" type="text" matInput placeholder="Ingresa ciudad" (keypress)="soloLetras($event)">
               </mat-form-field>
               <div *ngIf="errors.ciudad" class="invalid-feedback">{{ errors.ciudad }}</div>
 
